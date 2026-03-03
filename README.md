@@ -22,7 +22,7 @@ The dataset used is the **"Resale flat prices based on registration date from Ja
 3. **Asset Depreciation (The 99-Year Lease Decay):** A scatter plot correlation confirms the "lease decay" phenomenon. There is a clear, visually verifiable negative correlation between the chronological age of a flat and its price per square meter.
 
 ## Future Scope (Coming Soon)
-* **Predictive Modeling:** The next phase of this project will involve building a Machine Learning model (Linear Regression via `scikit-learn`) to predict the estimated resale value of a flat based on its town, size, and remaining lease.
+* **Predictive Modeling:** The next phase of this project involves building a Machine Learning model (Linear Regression via `scikit-learn`) to predict the estimated resale value of a flat based on its town, size, and remaining lease.
 
 ## How to Run This Project
 1. Clone this repository to your local machine.
