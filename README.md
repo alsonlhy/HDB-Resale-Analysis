@@ -21,11 +21,19 @@ The dataset used is the **"Resale flat prices based on registration date from Ja
 2. **Macro-Market Trends & External Shocks:** Time-series tracking of average prices exposes a distinct market surge post-2020. Prices escalated rapidly from hovering around 4,500 SGD/sqm to nearing 7,000 SGD/sqm, reflecting the supply-chain disruptions and BTO construction delays caused by the global pandemic.
 3. **Asset Depreciation (The 99-Year Lease Decay):** A scatter plot correlation confirms the "lease decay" phenomenon. There is a clear, visually verifiable negative correlation between the chronological age of a flat and its price per square meter.
 
+## Predictive Modeling (Machine Learning)
+* Built a basic linear regression model using 'scikit-learn' to predict HDB resale prices based on floor area, flat age, town and storey range. The foundational model achieved a Mean Absolute Error (MAE) of roughly $81,000, provinding a baseline prediction within 10-15% of actual transactional value. 
+
 ## Future Scope (Coming Soon)
-* **Predictive Modeling:** The next phase of this project involves building a Machine Learning model (Linear Regression via `scikit-learn`) to predict the estimated resale value of a flat based on its town, size, and remaining lease.
+* To explore new ways to improve accuracy via:
+    1. External Data using geographic API
+    2. Filter out outliers by removing the top 1% priced flats
+    3. Using more complex algorithms like **Random Forest** or **Gradient Boosting (XGBoost)**
+* Building an Interactive Web App using streamlit to showcase the machine learning model and allowing ease of inputting values to predict prices.
 
 ## How to Run This Project
 1. Clone this repository to your local machine.
 2. Ensure you have Python installed along with the required libraries (`pandas`, `matplotlib`, `seaborn`, `jupyter`).
 3. Download the dataset from data.gov.sg and place the `.csv` in the root directory.
 4. Open `hdb_analysis.ipynb` in VS Code or Jupyter Notebook and run the cells sequentially.
+5. Test the machine learning portion by changing the values under "TEST IT OUT HERE"
