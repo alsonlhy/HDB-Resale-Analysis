@@ -22,7 +22,7 @@ The dataset used is the **"Resale flat prices based on registration date from Ja
 3. **Asset Depreciation (The 99-Year Lease Decay):** A scatter plot correlation confirms the "lease decay" phenomenon. There is a clear, visually verifiable negative correlation between the chronological age of a flat and its price per square meter.
 
 ## Predictive Modeling (Machine Learning)
-* Built a basic linear regression model using 'scikit-learn' to predict HDB resale prices based on floor area, flat age, town and storey range. The foundational model achieved a Mean Absolute Error (MAE) of roughly $81,000, provinding a baseline prediction within 10-15% of actual transactional value. 
+* Built a basic linear regression model using 'scikit-learn' to predict HDB resale prices based on floor area, flat age, town and storey range. The foundational model has achieved a Mean Absolute Error (MAE) of roughly $81,000, provinding a baseline prediction within 10-15% of actual transactional value. 
 
 ## Future Scope (Coming Soon)
 * To explore new ways to improve accuracy via:
