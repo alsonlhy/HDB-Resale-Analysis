@@ -1,9 +1,15 @@
 # Singapore HDB Resale Market Analysis 🏙️
 
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)]([https://hdb-resale-analysis.streamlit.app/])
+
 ## Overview
 This project explores the dynamics of Singapore's public housing (HDB) resale market using Python. By analyzing over 220,000 transaction records, this exploratory data analysis (EDA) visualizes spatial valuation differences, macroeconomic market shifts, and the economic reality of asset depreciation (lease decay) in real estate.
 
-This is my first data analysis portfolio project, built to demonstrate foundational skills in data manipulation, visualization, and extracting actionable insights from raw data.
+This is my first data analysis portfolio project, built to demonstrate foundational skills in data manipulation, visualization, machine learning, and web deployment.
+
+## Try the Live Web App
+I have deployed the machine learning model as an interactive web application. You can input custom flat parameters (Town, Floor Area, Age, and Floor Rank) to generate real-time price predictions based on historical data. 
+👉 **[Click here to view the live HDB Price Predictor app]([https://hdb-resale-analysis.streamlit.app/])**
 
 ## Data Source
 The dataset used is the **"Resale flat prices based on registration date from Jan-2017 onwards"**, publicly sourced from the Singapore Government's open data portal: [data.gov.sg](https://data.gov.sg/). 
@@ -14,7 +20,9 @@ The dataset used is the **"Resale flat prices based on registration date from Ja
 * **Python 3**
 * **Pandas**: For data cleaning, feature engineering (calculating price per sqm and flat age), and time-series grouping.
 * **Matplotlib & Seaborn**: For generating static, comprehensive data visualizations.
-* **Jupyter Notebook**: For interactive, step-by-step analysis.
+* **Scikit-learn**: For engineering dummy variables, ordinal mapping, and building the Multiple Linear Regression model.
+* **Streamlit**: For developing and deploying the interactive frontend web application.
+* **Jupyter Notebook**: For interactive, step-by-step EDA and model training.
 
 ## Key Insights Discovered
 1. **Geospatial Valuation (The Location Premium):** A cross-sectional analysis reveals that the **Central Area** commands the highest premium per square meter, while non-mature estates like **Choa Chu Kang** provide the most accessible entry points for buyers.
@@ -22,18 +30,16 @@ The dataset used is the **"Resale flat prices based on registration date from Ja
 3. **Asset Depreciation (The 99-Year Lease Decay):** A scatter plot correlation confirms the "lease decay" phenomenon. There is a clear, visually verifiable negative correlation between the chronological age of a flat and its price per square meter.
 
 ## Predictive Modeling (Machine Learning)
-* Built a basic linear regression model using 'scikit-learn' to predict HDB resale prices based on floor area, flat age, town and storey range. The foundational model has achieved a Mean Absolute Error (MAE) of roughly $81,000, provinding a baseline prediction within 10-15% of actual transactional value. 
+Built a Multiple Linear Regression model using `scikit-learn` to predict HDB resale prices based on floor area, flat age, town, and storey range. The foundational model achieved a Mean Absolute Error (MAE) of roughly $81,347, providing a baseline prediction within 10-15% of actual transaction values.
 
 ## Future Scope (Coming Soon)
-* To explore new ways to improve accuracy via:
-    1. External Data using geographic API
-    2. Filter out outliers by removing the top 1% priced flats
-    3. Using more complex algorithms like **Random Forest** or **Gradient Boosting (XGBoost)**
-* Building an Interactive Web App using streamlit to showcase the machine learning model and allowing ease of inputting values to predict prices.
+To explore new ways to improve model accuracy via:
+1. **External Data:** Integrating geographic APIs to calculate distance to the nearest MRT stations or top-tier primary schools.
+2. **Outlier Filtering:** Removing the top 1% priced luxury flats to normalize the training data.
+3. **Advanced Algorithms:** Testing non-linear models like **Random Forest** or **Gradient Boosting (XGBoost)** to better capture complex market dynamics.
 
-## How to Run This Project
+## How to Run This Project Locally
 1. Clone this repository to your local machine.
-2. Ensure you have Python installed along with the required libraries (`pandas`, `matplotlib`, `seaborn`, `jupyter`).
-3. Download the dataset from data.gov.sg and place the `.csv` in the root directory.
-4. Open `hdb_analysis.ipynb` in VS Code or Jupyter Notebook and run the cells sequentially.
-5. Test the machine learning portion by changing the values under "TEST IT OUT HERE"
+2. Ensure you have Python installed along with the required libraries (run `pip install -r requirements.txt`).
+3. **To view the analysis:** Download the dataset from data.gov.sg, place the `.csv` in the root directory, and open `hdb_analysis.ipynb` in VS Code or Jupyter Notebook.
+4. **To run the web app:** Open your terminal, navigate to the project folder, and run `python -m streamlit run app.py`.
