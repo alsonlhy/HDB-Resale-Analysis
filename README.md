@@ -1,6 +1,6 @@
 # Singapore HDB Resale Market Analysis 🏙️
 
-[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)]([https://hdb-resale-analysis.streamlit.app/])
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://hdb-resale-analysis.streamlit.app/)
 
 ## Overview
 This project explores the dynamics of Singapore's public housing (HDB) resale market using Python. By analyzing over 220,000 transaction records, this exploratory data analysis (EDA) visualizes spatial valuation differences, macroeconomic market shifts, and the economic reality of asset depreciation (lease decay) in real estate.
@@ -9,7 +9,7 @@ This is my first data analysis portfolio project, built to demonstrate foundatio
 
 ## Try the Live Web App
 I have deployed the machine learning model as an interactive web application. You can input custom flat parameters (Town, Floor Area, Age, and Floor Rank) to generate real-time price predictions based on historical data. 
-👉 **[Click here to view the live HDB Price Predictor app]([https://hdb-resale-analysis.streamlit.app/])**
+👉 **[Click here to view the live HDB Price Predictor app](https://hdb-resale-analysis.streamlit.app/)**
 
 ## Data Source
 The dataset used is the **"Resale flat prices based on registration date from Jan-2017 onwards"**, publicly sourced from the Singapore Government's open data portal: [data.gov.sg](https://data.gov.sg/). 
